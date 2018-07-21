@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     private func getLocationKey(city:String)->Void{
         var key = "";
         var weather = "";
-        let citySearchURL = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=0WU83YFGOe4sF31DBUrGhA6AUOr9ULit&q=\(city)";
+        let citySearchURL = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey={}&q=\(city)";
         
         Alamofire.request(citySearchURL)
             .responseString { response in
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     
     private func getLocationWeather(key:String)->Void{
         var weather = "";
-                let weatherSearchURL = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/\(key)?apikey=0WU83YFGOe4sF31DBUrGhA6AUOr9ULit";
+                let weatherSearchURL = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/\(key)?apikey={}";
                 print("here is the key \(key)")
         
                 Alamofire.request(weatherSearchURL)
