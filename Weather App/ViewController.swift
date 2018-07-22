@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet var citytext: UITextField!
     @IBAction func submitButton(_ sender: Any) {
         let city = replace(city: citytext.text!);
-        
+        weatherText.text = "Loading...";
         getLocationKey(city: city)
     }
     
